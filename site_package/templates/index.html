@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>k-punk style log</title>
+</head>
+<body>
+<h1>k-punk collective</h1>
+
+{% for p in posts %}
+<div class="post">
+    <img src="/static/uploads/{{ p.image }}" class="photo">
+    <p class="text">{{ p.text }}</p>
+    <p class="date">{{ p.created_at }}</p>
+</div>
+{% endfor %}
+</body>
+</html>
